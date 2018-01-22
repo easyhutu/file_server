@@ -5,6 +5,7 @@ AUTHOR: Hehahutu
 from setting import FILE_BASE_PATH
 import os
 
+
 # 读取文件核心函数， file_path参数实例 ： /xxx/xxx & /xx/xx.xx
 def get_file_list(file_path):
     try:
@@ -35,10 +36,10 @@ def get_file_list(file_path):
                 # 使用basename方法获取文件名
                 filename = os.path.basename(path)
                 # 读取文件
-                with open(path, 'rb') as f:
-                    data = f.read()
+                # with open(path, 'rb') as f:
+                #     data = f.read()
                 # 返回参数 file 文件标识， filename 文件名， data读取的二进制文件内容
-                return 'file', filename, data
+                return 'file', filename, path
         else:
             return None
     except Exception as e:
