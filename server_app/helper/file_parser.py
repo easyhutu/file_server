@@ -5,6 +5,7 @@ AUTHOR: Hehahutu
 from setting import FILE_BASE_PATH
 import os
 
+
 # 读取文件核心函数， file_path参数实例 ： /xxx/xxx & /xx/xx.xx
 def get_file_list(file_path):
     try:
