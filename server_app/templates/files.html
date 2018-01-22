@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ path }}-文件服务器</title>
+</head>
+<body>
+<ul>
+    <li><a href="{{ last_url }}">...上一级</a></li>
+
+
+    {% for foo in folders %}
+        <li><a href="{{ foo[1] }}">{{ foo[0] }}</a></li>
+    {% endfor %}
+    {% for foo in files %}
+        <li><a href="{{ foo[1] }}">{{ foo[0] }}</a></li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>
