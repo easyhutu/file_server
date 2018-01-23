@@ -16,7 +16,7 @@ class FileView(MethodView):
         data = get_file_list(path)
         # print(data, )
         last_path = session.get('last_path', request.path)
-        spli = request.path.split('/')[:-2]
+        spli = request.path.split('/')[:-1]
         last_url = '/'.join(spli) or '/'
         session['last_path'] = request.path
         if data:

@@ -6,7 +6,7 @@ import sys
 
 DEBUG = False
 SECRET_KEY = 'SDF6(()%fln(%$)blh&$#hnmuk$hgk79g^$*n5JN'
-BLANK_SIZE = 2048
+BLANK_SIZE = 512
 
 # 配置服务器读取文件根目录
 try:
