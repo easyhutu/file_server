@@ -21,7 +21,7 @@ BLANK_SIZE = 512
 # 配置服务器读取文件根目录
 LINUX_BASE_PATH = [
     '/extend/fileserver',
-    '/extend/fileserver',
+
 ]
 WINDOW_BASE_PATH = [
     'E:\\file_server\\TEST',
