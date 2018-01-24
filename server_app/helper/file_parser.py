@@ -4,6 +4,7 @@ AUTHOR: Hehahutu
 """
 from setting import FILE_BASE_PATH
 import os
+from setting import BLANK_SIZE
 
 
 # 读取文件核心函数， file_path参数实例 ： /xxx/xxx & /xx/xx.xx
@@ -44,3 +45,13 @@ def get_file_list(file_path):
             return None
     except Exception as e:
         return None
+
+
+def read_file_data(path):
+    with open(path, 'rb') as f:
+        while True:
+            data = f.read(BLANK_SIZE)
+            if data:
+                yield data
+            else:
+                return False
