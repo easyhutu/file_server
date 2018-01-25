@@ -16,17 +16,14 @@ except Exception as e:
     print(e)
 DEBUG = env('DEBUG', False)
 SECRET_KEY = 'SDF6(()%fln(%$)blh&$#hnmuk$hgk79g^$*n5JN'
-BLANK_SIZE = 512
+BLANK_SIZE = 128  # 不建议大于128
 
 # 配置服务器读取文件根目录
-LINUX_BASE_PATH = [
-    '/extend/fileserver',
+LINUX_BASE_PATH = '/extend/fileserver'
 
-]
-WINDOW_BASE_PATH = [
-    'E:\\file_server\\TEST',
-    'E:\\file_server\\TEST',
-]
+WINDOW_BASE_PATH = 'E:\\file_server\\TEST'
+
+
 try:
     env_platform = sys.platform
     if env_platform == 'linux':
